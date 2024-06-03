@@ -8,18 +8,19 @@ namespace MyBB\Stopwatch;
  * Stores time and memory usage measurements.
  */
 class Event
+    
 {
     /**
      * @var Period[]
      */
-    private array $periods = [];
+    private array $periods =  [];
 
     /**
      * Creates a new period, and saves the start time.
      */
     public function addPeriod(?float $time = null): Period
     {
-        $period = new Period();
+        $period =new Period();
 
         $period->start($time);
 
